@@ -9,7 +9,7 @@ apache-package-install-deps-pkg-installed:
   pkg.installed:
     - names: {{ apache.pkg.deps|json }}
     - require:
-      - apache-package-install-pkg-installed
+      - apache: apache-package-install-pkg-installed
     {%- endif %}
 
 apache-package-install-pkg-installed:
